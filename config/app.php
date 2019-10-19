@@ -167,16 +167,25 @@ return [
         /*
          * Package Service Providers...
          */
+        Collective\Html\HtmlServiceProvider::class,
 
+
+        Laravel\Tinker\TinkerServiceProvider::class,
+
+        Khill\Lavacharts\Laravel\LavachartsServiceProvider::class,
+        
         /*
-         * Application Service Providers...
+         * Application Service Collective\Html\HtmlServiceProvider::class,...
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        
+        'Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider',
 
+        
     ],
 
     /*
@@ -226,6 +235,11 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        /* Vendor Aliases */
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,  
+
+        'Lava' => Khill\Lavacharts\Laravel\LavachartsFacade::class,
     ],
 
 ];
